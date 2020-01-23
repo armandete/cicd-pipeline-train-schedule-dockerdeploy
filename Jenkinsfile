@@ -15,9 +15,6 @@ pipeline {
             steps {
                 script {
                     app = docker.build("armandete/train-sched2")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
-                    }
                 }
             }
         }
